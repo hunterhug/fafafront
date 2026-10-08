@@ -1,6 +1,6 @@
 {
   "name": "fafafront-web",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "FaFa CMS frontend website (Vue3 + Vite + Element Plus)",
   "private": true,
   "type": "module",
