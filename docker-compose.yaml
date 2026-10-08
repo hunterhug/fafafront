@@ -1,0 +1,33 @@
+# FaFa 前端一键部署（Vue3 + Vite，nginx 静态托管 + 反代后端 + 产品文档 docsify）
+# 用法：./deploy.sh
+services:
+  web:
+    container_name: fafafront-web
+    restart: always
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      args:
+        BACKEND_UPSTREAM: ${BACKEND_UPSTREAM:-fafacms:8080}
+    image: hunterhug/fafafront:latest
+    ports:
+      - "3000:80"
+    networks:
+      - fafa-net
+
+  # 产品文档（docsify），跟随后端接口文档同风格
+  fafadoc:
+    container_name: fafafront-doc
+    restart: always
+    build:
+      context: ./docs
+      dockerfile: Dockerfile_docsify
+    image: hunterhug/fafafront-doc:latest
+    ports:
+      - "8889:3000"
+    networks:
+      - fafa-net
+
+networks:
+  fafa-net:
+    external: true

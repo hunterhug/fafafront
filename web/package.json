@@ -1,0 +1,38 @@
+{
+  "name": "fafafront-web",
+  "version": "1.0.21",
+  "description": "FaFa CMS frontend website (Vue3 + Vite + Element Plus)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "@wangeditor/plugin-md": "^1.0.0",
+    "axios": "^1.7.9",
+    "cropperjs": "^1.6.2",
+    "crypto-js": "^4.1.1",
+    "element-plus": "^2.9.1",
+    "markdown-it": "^15.0.1",
+    "markdown-it-task-lists": "^2.1.1",
+    "md-editor-v3": "^6.5.6",
+    "pinia": "^2.3.0",
+    "qrcode": "^1.5.4",
+    "turndown": "^7.2.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "vuedraggable": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "vite": "^6.4.3"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true,
+    "vue-demi@0.14.10": true
+  }
+}

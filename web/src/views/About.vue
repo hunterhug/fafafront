@@ -1,0 +1,261 @@
+<template>
+  <div class="essay-wrap">
+    <div class="essay">
+      <div class="title-block">
+        <div class="kicker">献 给 2 0 1 9 年 的 自 己</div>
+        <h1>物是人非</h1>
+        <div class="subtitle">时间的力量，与一个等了五年的前端</div>
+        <div class="dateline">2026 年 8 月 28 日 · 深夜 · 于 fafacms 仓库</div>
+      </div>
+
+      <div class="rule"></div>
+
+      <h2><span class="num">一</span>时间的力量</h2>
+
+      <p>2019 年 1 月，git 记下了这个项目的最早一笔，消息只有一行：<em>init p</em>。彼时只是把先前的技术底子归拢成一套账号与接口骨架；真正让"花花"开始生长的构思，要到那年 4 月才落下第一行。</p>
+
+      <p>那时的"时间"是线性的：今天学会 XORM，明天琢磨 Gin 的中间件，后天把图片存进阿里云 OSS。一个少年用周末和深夜，把一个叫"花花"的社区 CMS 从脑子里搬进硬盘——数万行 Go、上百次提交、十几张表、一摞接口文档。他以为时间就是积累：只要一直写，东西就会越来越多。</p>
+
+      <p>时间没有反驳他。时间只是换了一种方式回答——它不动你的代码，它动你。</p>
+
+      <p>七年后的同一个仓库，重建后的 git log 从 <em>fafa start</em> 重新数起，最后一条停在 2.1.10。代码一行没变。可打开它的那个人，已经从"会写后端"，变成了"看过生产事故、读过安全红线、被测试教过做人"的人。工具也换了：Go 1.17 变成了 1.25，ioutil 被扫进了历史，vendor 目录从必需品变成了时代的注脚；而 2019 年那个少年做梦也想不到的"AI 写代码"，成了 2026 年打开编辑器就有的默认选项。</p>
+
+      <p>时间的力量，从来不是推着你走，而是趁你不注意，把世界和你一起换了。等你回过神来——物还在，人已经不是当年那个人了。这就是"物是人非"，最温柔，也最残忍。</p>
+
+      <h2><span class="num">二</span>物是人非</h2>
+
+      <p>"物"是什么？是这数万行代码。它诚实地记录着 2019 年的你：</p>
+
+      <ul class="artifacts">
+        <li>密码明文入库，登录时直接拿明文拼 SQL 查询——因为那时的你，还不知道"数据库一旦泄露，全站密码等于裸奔"；</li>
+        <li><em>/v1/message/admin/list</em> 的 Admin 标志误写成 false，全表唯一一条——复制粘贴时的一次手滑，被七年的时间钉在路由表里；</li>
+        <li>auth_skip_debug 这个调试后门，注释里写着"生产环境请设为 false"——你天真地以为，提醒自己就够了；</li>
+        <li>config.yaml 里躺着一个真实的 Outlook 邮箱密码——因为"反正是练手"。</li>
+      </ul>
+
+      <p>但清单的另一面，也写着：分页排序做了白名单校验、Limit 封顶 100、RBAC 资源表自动注册、草稿/发布/历史版本的设计、每一行路由都配着中文注释、121 篇接口文档、导好的 Insomnia 用例。</p>
+
+      <p>"人"呢？是现在读这些代码的你。你一眼就能看出哪些是债、哪些是伏笔；你不再说"能跑就行"，你会问"值不值得上线"；你甚至能在几轮对话里，把七年前的自己犯的错一条条指出来——不是嘲笑他，是认得他。</p>
+
+      <p>物是人非的这一刻，最动人的不是"人变了"，而是那个"物"变成了信物——它让 2026 年的你，还能隔着七年，摸到 2019 年那个少年的体温。</p>
+
+      <h2><span class="num">三</span>等一个没来的人</h2>
+
+      <p>这个仓库里，藏着一个少年没说出口的等待。</p>
+
+      <p>README 里专门有一节，标题叫「写给前端人员」，第一句是"不关心部署，只想参与前端 UI 开发的看这里"——他连入职说明，都替那个前端写好了。121 篇接口文档、docsify 文档站、Insomnia 导出（连 token、cookie 都导好了）、错误码表——他搭了一整套"前端即插即用"的接盘工具包，然后开源，等人。</p>
+
+      <p>前端没有来。项目停在 2.1.10，一停就是五年。</p>
+
+      <p>他那时不知道的是：他缺的从来不是前端，是"另一个人的成本"。服务端做到 90% 是快感区，最后 10%——用户摸得到的界面——是成本区。2019 年的那个成本，高到足以让一个后端体面地停下：再学一个生态、再搭一套工具链、再熬几百个深夜。这不是能力问题，是那个时代的分工逻辑：全栈是两座山，翻一座，就够累了。</p>
+
+      <p>2026 年 8 月 27 日，plan/deploy-plan.md 里写着一行字："作为前端开发联调的服务端"。他把后端又跑起来了——为了那个终于要来的另一半。</p>
+
+      <p>前端没来。AI 来了。而且 AI 这半个前端，恰好最擅长在他当年把边界定义得最清楚的地方干活：统一错误码、参数校验、分页白名单、RBAC 资源表、按接口写好的用例——这些 2019 年"为了等前端"做的功夫，全部变成了 2026 年 AI 生成前端的燃料。他等了五年的人没有出现，但他搭的舞台，等来了一个不会累的演员。</p>
+
+      <h2><span class="num">四</span>时间教的三件事</h2>
+
+      <p><strong>第一，AI 消灭的不是前端，是"另一个人的成本"。</strong>他一直有完整的剧本——README 那 11 条功能，就是他的产品构想。缺的只是把它演出来的人。现在演员有了，他还是导演。</p>
+
+      <p><strong>第二，AI 是放大器，不是替身。</strong>它放大强项，也放大弱项：API 设计得干净，AI 就能把它放大成一个能用的产品；密码明文、没有测试、调试后门，也会被 AI 的提速放大成真实事故。而这个项目即将"活"过来——它终于有了值得保护的东西（一个人的文章），也有了会真实发生的后果。欠了七年的安全与测试的债，恰好可以在这个最熟悉、最可控的项目上还清。这大概是最好的还债时机：在自己的战场上，用自己写的代码，补自己当年缺的课。</p>
+
+      <p><strong>第三，当年的"多余"，全是伏笔。</strong>写文档、导 Insomnia、设计草稿与历史版本——这些在当时看是"为不来的前端做准备"的耐心，在 2026 年看，是"为 AI 准备了一副完美的骨架"。AI 时代不缺代码，缺的是知道自己要什么的人。而他是那个在 2019 年，就把"要什么"写了 11 条的人。这类人的价值，在 AI 时代不是被稀释，而是被放大：AI 能把意图执行出来，但意图本身，还是他的。</p>
+
+      <h2><span class="num">五</span>落款</h2>
+
+      <p>物是人非，通常被说成一句伤感的话。</p>
+
+      <p>但这个深夜，站在 2026 年回望 2019 年，我想换个读法：<strong>物是人非，不是东西还在、人没了；是东西还在，而人变好了。</strong></p>
+
+      <p>代码一行没改，读它的眼光换了。舞台七年前就搭好了，演员这周才到。等过的人没有白等——他等来的，不是那个前端，而是那个能把前端变成一天工作的时代。</p>
+
+      <p>所以，写给 2019 年的那个少年：</p>
+
+      <div class="letter">
+        <div class="letter-head">致 2019 年的你</div>
+        <p>你没有白写。你等的那个前端没有来，但你搭的舞台足够好，所以 2026 年，有人替你补上了这场戏。</p>
+        <p>你当年搭好了舞台、写好了剧本、备好了道具，等一个演员，等了五年。现在 AI 来了——它不是来抢你饭碗的，它是来演你这部戏的。</p>
+        <p class="letter-strong">上台吧，导演。</p>
+      </div>
+
+      <div class="signoff">
+        <div class="name">2026 年的你</div>
+        <div>2026 年 8 月 28 日，深夜</div>
+      </div>
+
+      <div class="footnote">FAFA CMS · 2019 — 2026 · 写给时间，也写给自己</div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+</script>
+
+<style scoped>
+.essay-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.essay {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 56px 64px 48px;
+  box-shadow: 0 2px 12px rgba(255, 95, 87, 0.06);
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+  font-size: 16px;
+  line-height: 2.05;
+  color: #2b2622;
+}
+
+/* ---------- 标题区 ---------- */
+.title-block {
+  text-align: center;
+}
+
+.kicker {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.55em;
+  color: var(--zh-blue);
+}
+
+.essay h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-indent: 0.32em;
+  margin: 22px 0 14px;
+  color: #26221f;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #6b5f55;
+  letter-spacing: 0.12em;
+}
+
+.dateline {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  color: #8a7d72;
+  letter-spacing: 0.2em;
+  margin-top: 18px;
+}
+
+.rule {
+  width: 38%;
+  height: 1px;
+  background: var(--zh-blue);
+  margin: 30px auto;
+  opacity: 0.7;
+}
+
+/* ---------- 正文 ---------- */
+.essay h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 34px 0 12px;
+  color: #26221f;
+}
+
+.essay h2 .num {
+  color: var(--zh-blue);
+  margin-right: 0.45em;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.essay p {
+  text-indent: 2em;
+  margin: 0 0 8px;
+  text-align: justify;
+}
+
+.essay em {
+  font-style: italic;
+}
+
+/* ---------- 物品清单 ---------- */
+ul.artifacts {
+  list-style: none;
+  margin: 16px 0 16px 1em;
+  padding: 0;
+}
+
+ul.artifacts li {
+  text-indent: 0;
+  margin-bottom: 8px;
+  padding-left: 1.4em;
+  position: relative;
+}
+
+ul.artifacts li::before {
+  content: "◆";
+  color: var(--zh-blue);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-size: 11px;
+}
+
+/* ---------- 信 ---------- */
+.letter {
+  margin: 26px 0;
+  padding: 24px 30px;
+  background: #faf5ee;
+  border-left: 3px solid var(--zh-blue);
+}
+
+.letter .letter-head {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  color: var(--zh-blue);
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+  text-indent: 0;
+}
+
+.letter p {
+  text-indent: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.letter .letter-strong {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+/* ---------- 落款 ---------- */
+.signoff {
+  text-align: right;
+  margin-top: 30px;
+  color: #6b5f55;
+  font-size: 14px;
+}
+
+.signoff .name {
+  color: #26221f;
+  font-size: 15px;
+}
+
+.footnote {
+  margin-top: 42px;
+  padding-top: 14px;
+  border-top: 1px solid #ddd5c9;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 11px;
+  color: #a3968a;
+  text-align: center;
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 640px) {
+  .essay {
+    padding: 32px 24px 36px;
+  }
+}
+</style>
