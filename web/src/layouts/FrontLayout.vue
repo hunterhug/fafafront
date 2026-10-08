@@ -10,6 +10,7 @@
         <nav class="zh-nav-links">
           <router-link to="/" class="zh-nav-link home-link">{{ t('nav.home') }}</router-link>
           <router-link to="/explore" class="zh-nav-link">{{ t('nav.explore') }}</router-link>
+          <router-link to="/about" class="zh-nav-link">{{ t('nav.about') }}</router-link>
         </nav>
         <div class="zh-nav-right">
           <LanguageSwitcher />
